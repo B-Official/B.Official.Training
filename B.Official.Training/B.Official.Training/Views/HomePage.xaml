@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModel="clr-namespace:B.Official.Training.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="B.Official.Training.Views.HomePage">
+    <ContentPage.BindingContext>
+        <viewModel:HomeViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="0" >
+                <Image HeightRequest="30" HorizontalOptions="StartAndExpand" Source="menu.png"/>
+                <Image HorizontalOptions="End" HeightRequest="30" Source="search.png"/>
+            </StackLayout>
+            <Label Text="Discover" FontAttributes="Bold" FontSize="28" TextColor="Black"/>
+            <Label Text="The perfect Healthy Food" FontSize="20"/>
+            <SearchBar Placeholder="Search"/>
+            <Label Text="Recommended" TextColor="Black" FontSize="18"/>
+            <CollectionView ItemsSource="{Binding ProductData}">
+                <CollectionView.EmptyView>
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Not Data"/>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout HorizontalItemSpacing="10" VerticalItemSpacing="10" Orientation="Vertical" Span="2"></GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <BoxView Grid.Row="1" CornerRadius="10" Grid.RowSpan="2" BackgroundColor="{Binding ColorItem}"></BoxView>
+                            <Image Grid.Row="0" Grid.RowSpan="2" Source="{Binding ImageItem}"/>
+                            <StackLayout Margin="5" Grid.Row="2" Orientation="Vertical">
+                                <Label Text="{Binding TitleItem}"/>
+                                <Label Text="{Binding ContentItem}"/>
+                                <Label Text="read more"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Price,StringFormat='${0}'}" HorizontalOptions="StartAndExpand"/>
+                                    <Frame Margin="5" Padding="0" BackgroundColor="Transparent" BorderColor="Gray" CornerRadius="10">
+                                        <StackLayout Margin="0" Padding="5" Orientation="Horizontal">
+                                            <Label Text="ADD"/>
+                                            <Image Source="plus.png" HeightRequest="15"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

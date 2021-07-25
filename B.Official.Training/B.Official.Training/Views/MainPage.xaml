@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModel="clr-namespace:B.Official.Training.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="B.Official.Training.Views.MainPage">
+    <ContentPage.BindingContext>
+        <viewModel:MainViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Spacing="0" VerticalOptions="Start">
+            <Label FontSize="28" FontAttributes="Bold" TextColor="Black" Margin="0,50,0,10" Text="Welcome"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Find Pertect, Healthy"
+                   TextColor="Black"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Food Salad"
+                VerticalOptions="Start" 
+                   TextColor="Black"
+                HorizontalOptions="CenterAndExpand" />
+            <Image Margin="80" Source="breakfast.png"/>
+            <Button Text="Lest's Start" BackgroundColor="Black" TextColor="White" Padding="10,0" CornerRadius="20" HorizontalOptions="End" Margin="0,0,15,30" Command="{Binding LestStartCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

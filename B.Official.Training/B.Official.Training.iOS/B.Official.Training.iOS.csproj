@@ -133,4 +133,28 @@
       <Name>B.Official.Training</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\breakfast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\french_fries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hot_dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\noodles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus.png" />
+  </ItemGroup>
 </Project>
