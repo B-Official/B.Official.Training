@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModel="clr-namespace:B.Official.Training.ViewModels"
+             Background="#fff"
+             BackgroundColor="#fff"
+             Title="{Binding Device.NameRoom}"
+             x:Class="B.Official.Training.Views.DetailPage">
+    <ContentPage.BindingContext>
+        <viewModel:DetailViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" RowDefinitions="300,150">
+                <BoxView Grid.Row="0" Grid.RowSpan="2" WidthRequest="350" HorizontalOptions="CenterAndExpand" BackgroundColor="#FCD8D4"  />
+                <BoxView HorizontalOptions="CenterAndExpand" Grid.Row="0" HeightRequest="300" WidthRequest="300">
+                    <BoxView.Background>
+                        <LinearGradientBrush >
+                            <GradientStop Color="#FAFF00"
+                          Offset="0.0" />
+                            <GradientStop Color="#A73489"
+                          Offset="0.4" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                    <BoxView.Clip>
+                        <EllipseGeometry RadiusX="150" RadiusY="150" Center="150,150"/>
+                    </BoxView.Clip>
+                </BoxView>
+                <BoxView Margin="20" HorizontalOptions="CenterAndExpand" Grid.Row="0" HeightRequest="260" WidthRequest="260" BackgroundColor="#fff">
+                   
+                    <BoxView.Clip>
+                        <EllipseGeometry RadiusX="130" RadiusY="130" Center="130,130"/>
+                    </BoxView.Clip>
+                </BoxView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
