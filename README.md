@@ -53,6 +53,4 @@ Xamarin also integrates with thousands of third-party libraries including Google
 ## What is Xamarin.Forms?
 If you're building apps with Xamarin, you'll soon come across Xamarin.Forms.
 Xamarin.Forms is an open source cross-platform UI framework from Microsoft for building iOS, Android, and Windows apps with .NET from a single, shared codebase.
-![Xamarin](https://dotnet.microsoft.com/static/images/xamarin/screenshot-tailwind-traders.png?v=dPN3sCtGrAmeulZ5Dl2jFkL1nmh6GrxvV5hLqjoSYqs)
-
-Trích dẫn [Microsoft](https://docs.microsoft.com/en-us/xamarin/get-started/installation/?pivots=windows)
+### Trích dẫn [![Xamarin](https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31)](https://docs.microsoft.com/en-us/xamarin/get-started/installation/?pivots=windows)
