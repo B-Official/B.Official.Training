@@ -1,4 +1,5 @@
 ﻿using System;
+using B.Official.Training.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,11 @@ namespace B.Official.Training
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage())
+            {
+                BarBackgroundColor = Color.FromHex("#fff"),
+                BarTextColor = Color.Black,
+            };
         }
 
         protected override void OnStart()

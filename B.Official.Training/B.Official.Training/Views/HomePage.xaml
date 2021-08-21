@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="B.Official.Training.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:B.Official.Training.ViewModels;assembly=B.Official.Training"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <viewModels:HomeViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Spacing="10"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                FontSize="30"
+                HorizontalOptions="CenterAndExpand"
+                Text="Home"
+                VerticalOptions="CenterAndExpand" />
+            <Label Text="{Binding User.UserName}" />
+            <Label Text="{Binding User.Email}" />
+            <Label Text="{Binding User.Password}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
