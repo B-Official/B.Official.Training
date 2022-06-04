@@ -19,6 +19,7 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Button Text="Chuyển trang" Clicked="Button_OnClicked"></Button>
     </StackLayout>
 
 </ContentPage>
